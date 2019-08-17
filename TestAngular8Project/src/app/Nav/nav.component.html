@@ -1,18 +1,20 @@
-<p-menubar id="menubar" styleClass="menucus" [model]="items" [autoDisplay]="false">
-    <div *ngIf="loggedin()">
-        <a> <i class="fa fa-user"></i> Welcome {{authService.decodeToken?.unique_name}}</a>
-        <button pButton type="submit" label="Logout" (click)="logout();" icon="fa fa-sign-out"
-            style="margin-left:.25em"></button>
-    </div>
-    <form *ngIf="!loggedin()" #loginForm="ngForm" (ngSubmit)="login()">
-        <div>
-            <input type="text" pInputText placeholder="UserName" name="username" required [(ngModel)]="model.username"
-                style="margin-right:.25em">
-            <input type="password" pPassword style="margin-right:.25em" name="password" required
-                [(ngModel)]="model.password">
-                <button pButton type="submit" label="Login" [disabled]="!loginForm.valid" icon="fa fa-sign-in"
-                    style="margin-left:.25em"></button>
-        </div>
-    </form>
 
-</p-menubar>
+    <p-menubar id="menubar" styleClass="menucus" [model]="items" [autoDisplay]="false">
+        <div *ngIf="loggedin()">
+            <a> <i class="fa fa-user"></i> Welcome {{authService.decodeToken?.unique_name}}</a>
+            <button pButton type="submit" label="Logout" (click)="logout();" icon="fa fa-sign-out"
+                style="margin-left:.25em"></button>
+        </div>
+        <form *ngIf="!loggedin()" #loginForm="ngForm" (ngSubmit)="login()">
+            <div>
+                <input type="text" pInputText placeholder="UserName" name="username" required [(ngModel)]="model.username"
+                    style="margin-right:.25em">
+                <input type="password" pPassword style="margin-right:.25em" name="password" required
+                    [(ngModel)]="model.password">
+                    <button pButton type="submit" label="Login" [disabled]="!loginForm.valid" icon="fa fa-sign-in"
+                        style="margin-left:.25em"></button>
+            </div>
+        </form>
+    
+    </p-menubar>
+

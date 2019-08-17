@@ -12,28 +12,18 @@ import { RegisterComponent } from './register/register.component';
 import { HomeComponent } from './home/home.component';
 import { ErrorInterceptorProvider } from './_services/error-interceptor.service';
 import { AlertifyService } from './_services/alertify.service';
-
-
+import { AuthGuard } from './_guards/auth.guard';
 
 @NgModule({
-   declarations: [
-      AppComponent,
-      NavComponent,
-      RegisterComponent,
-      HomeComponent
-   ],
-   imports: [
-      BrowserModule,
-      AppRoutingModule,
-      PrimeModule,
-      FormsModule,
-      SharedModule
-   ],
-   providers: [
-      AuthService, ErrorInterceptorProvider, AlertifyService
-   ],
-   bootstrap: [
-      AppComponent
-   ]
+  declarations: [AppComponent, NavComponent, RegisterComponent, HomeComponent],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    PrimeModule,
+    FormsModule,
+    SharedModule
+  ],
+  providers: [AuthService, ErrorInterceptorProvider, AlertifyService,AuthGuard],
+  bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
