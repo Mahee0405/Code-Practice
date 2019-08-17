@@ -1,0 +1,13 @@
+#container{
+	width: 1200px;
+	margin: 0px auto;
+}
+
+#app-content {
+	min-height: 31em;
+	overflow: auto;
+}
+footer {
+	background-color : black;
+	color: white;
+}

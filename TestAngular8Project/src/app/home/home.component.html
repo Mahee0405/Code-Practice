@@ -1,0 +1,16 @@
+<div  class="p-grid">
+  <div *ngIf="!registerMode" class="p-col-12">
+    <div style="text-align: center">
+      <h1>Welcome to Angular 8 Site</h1>
+    </div>
+    <div style="text-align: center">
+      <button pButton type="button" label="Register" (click)="registerToggle()"></button>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="registerMode" class="p-grid p-justify-center">
+    <div class="p-col-2">
+      <app-register (cancelRegister)="cancelRegisterMode($event)"></app-register>
+    </div>
+</div>
