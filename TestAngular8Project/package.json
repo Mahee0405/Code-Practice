@@ -21,6 +21,8 @@
     "@angular/router": "~8.2.0",
     "@auth0/angular-jwt": "^2.0.0",
     "alertifyjs": "^1.11.4",
+    "bootstrap": "^4.3.1",
+    "jquery": "^3.4.1",
     "primeflex": "^1.0.0-rc.1",
     "primeicons": "^2.0.0",
     "primeng": "^8.0.2",
